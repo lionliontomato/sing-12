@@ -1,0 +1,166 @@
+
+body{
+  background:
+    linear-gradient(135deg,#9caebf 0%,#8ca1b4 35%,#7d95a9 65%,#8ca1b4 100%) !important;
+}
+
+.bg-art,
+.bg-blossom,
+.bg-clouds,
+.bg-mountain,
+.bg-shuttle,
+.bg-fan{
+  position:fixed;
+  pointer-events:none;
+  z-index:0;
+}
+
+.bg-art{
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.20) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+  background-size:44px 44px;
+  opacity:.7;
+}
+
+.bg-mountain{
+  left:0;
+  right:0;
+  bottom:0;
+  height:46vh;
+  background:
+    radial-gradient(ellipse at 8% 82%, rgba(64,89,105,.34), transparent 34%),
+    radial-gradient(ellipse at 22% 75%, rgba(64,89,105,.26), transparent 30%),
+    radial-gradient(ellipse at 84% 70%, rgba(64,89,105,.30), transparent 32%),
+    radial-gradient(ellipse at 96% 84%, rgba(64,89,105,.24), transparent 28%),
+    linear-gradient(to top, rgba(64,89,105,.12), transparent 70%);
+  filter:blur(9px);
+}
+
+.bg-clouds{
+  inset:0;
+  opacity:.7;
+  background:
+    radial-gradient(ellipse at 12% 42%, transparent 55%, rgba(111,135,149,.22) 56%, transparent 58%),
+    radial-gradient(ellipse at 88% 34%, transparent 55%, rgba(111,135,149,.18) 56%, transparent 58%),
+    radial-gradient(ellipse at 70% 72%, transparent 55%, rgba(111,135,149,.16) 56%, transparent 58%);
+}
+
+.bg-blossom{
+  left:-20px;
+  top:35px;
+  width:340px;
+  height:240px;
+  opacity:.72;
+  transform:rotate(-12deg);
+}
+
+.bg-blossom::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:110px;
+  width:330px;
+  height:3px;
+  background:rgba(64,89,105,.28);
+  transform:rotate(-18deg);
+  transform-origin:left center;
+}
+
+.bg-blossom span{
+  position:absolute;
+  width:26px;
+  height:26px;
+  border-radius:58% 42% 60% 40%;
+  background:rgba(248,245,239,.82);
+  border:1px solid rgba(64,89,105,.16);
+  box-shadow:0 0 0 7px rgba(216,180,160,.10);
+}
+
+.bg-blossom span:nth-child(1){left:42px;top:92px}
+.bg-blossom span:nth-child(2){left:90px;top:68px}
+.bg-blossom span:nth-child(3){left:140px;top:52px}
+.bg-blossom span:nth-child(4){left:190px;top:34px}
+.bg-blossom span:nth-child(5){left:242px;top:20px}
+.bg-blossom span:nth-child(6){left:120px;top:102px}
+.bg-blossom span:nth-child(7){left:214px;top:78px}
+
+/* 左下角花鳥 CSS 模擬 */
+.bg-shuttle{
+  left:20px;
+  bottom:20px;
+  width:140px;
+  height:140px;
+  position: fixed;
+  z-index: 0;
+  transform: rotate(-10deg);
+  opacity: 0.9;
+  pointer-events: none;
+  background: radial-gradient(circle at 30% 30%, rgba(248,245,239,0.9) 15%, transparent 16%),
+              radial-gradient(circle at 70% 50%, rgba(216,180,160,0.7) 10%, transparent 12%),
+              radial-gradient(circle at 50% 80%, rgba(200,150,120,0.6) 12%, transparent 14%);
+  border-radius: 50%;
+}
+
+.bg-shuttle::before {
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:60px;
+  height:60px;
+  background: radial-gradient(circle at 50% 50%, rgba(248,245,239,0.85), transparent 60%);
+  border-radius: 50% 40% 60% 40%;
+  transform: translate(-50%,-50%) rotate(-20deg);
+}
+
+.bg-shuttle::after {
+  content:"";
+  position:absolute;
+  left:30%;
+  top:20%;
+  width:40px;
+  height:40px;
+  background: radial-gradient(circle at 50% 50%, rgba(216,180,160,0.7), transparent 60%);
+  border-radius: 40% 60% 40% 60%;
+  transform: rotate(15deg);
+}
+
+/* 右下角扇面花鳥 */
+.bg-fan{
+  right:10px;
+  bottom:10px;
+  width:320px;
+  height:320px;
+  position: fixed;
+  z-index: 0;
+  opacity:0.9;
+  pointer-events:none;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,248,240,0.5), transparent 60%),
+    radial-gradient(circle at 35% 35%, rgba(216,180,160,0.6), transparent 40%),
+    radial-gradient(circle at 65% 45%, rgba(248,245,239,0.7), transparent 35%),
+    radial-gradient(circle at 50% 65%, rgba(200,150,120,0.5), transparent 40%);
+  clip-path: polygon(50% 0%, 95% 30%, 85% 90%, 15% 90%, 5% 30%);
+}
+
+.bg-fan::before {
+  content:"";
+  position:absolute;
+  inset:20px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(248,245,239,0.6), transparent 50%),
+    radial-gradient(circle at 75% 35%, rgba(216,180,160,0.5), transparent 50%);
+}
+
+.bg-fan::after {
+  content:"";
+  position:absolute;
+  inset:50px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(200,150,120,0.4), transparent 50%);
+}
